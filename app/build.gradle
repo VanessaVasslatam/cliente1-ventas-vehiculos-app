@@ -9,6 +9,18 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
+}
+
+//================================================
+//==========    PROPIEDADES  INICIO   ============
+//================================================
+//PROPIEDADES DEFINIDAS CON EXT FORMA 1
+ext {
+	nombreProyecto = "Background Arland Venta de Vehiculos"
+	versionCompilado = "1.0.0"
+	correo = "milton.aguilar.776002@gmail.com"
+	
 }
 
 repositories {
@@ -35,4 +47,14 @@ application {
 tasks.named('test') {
     // Use junit platform for unit tests.
     useJUnitPlatform()
+}
+
+task empaquetar {
+	println("===========================================================")
+	println("=====     >>INICIO EMPAQUETADO  =====")
+	println("===========================================================")
+	println("Estoy empaquetando")
+	println("===========================================================")
+	println("=====     >>FINAL  EMPAQUETADO  =====")
+	println("===========================================================")
 }
